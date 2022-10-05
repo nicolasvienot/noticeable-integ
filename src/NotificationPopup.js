@@ -7,6 +7,10 @@ const config = {
 }
 
 const NotificationPopup = () => {
+  const handleFocus = (e) => {
+    e.stopPropagation()
+  }
+  
   useEffect(() => {
     window.noticeable.render('widget', config.noticeable.widget, {
       selector: '#noticeable-widget',
@@ -15,7 +19,7 @@ const NotificationPopup = () => {
       window.noticeable.destroy('widget', config.noticeable.widget)
     }
   }, [])
-  return <div id="noticeable-widget" />
+  return <div onFocus={handleFocus} id="noticeable-widget"/>
 }
 
 export default NotificationPopup
