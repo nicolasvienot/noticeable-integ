@@ -15,7 +15,7 @@ const NotificationPopup = () => {
       window.noticeable.destroy('widget', config.noticeable.widget)
     }
   }, [])
-  return <div id="noticeable-widget"/>
+  return <div id="noticeable-widget" />
 }
 
 export default NotificationPopup
